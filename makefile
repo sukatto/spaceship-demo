@@ -1,7 +1,7 @@
-all: assign10
+all: spaceshipDemo
 
-assign10: main.o GameEngine.o Ship.o Player.o Enemy.o Bullet.o Asteroid.o AsteroidA.o AsteroidB.o -lsfml-graphics -lsfml-window -lsfml-system
-	g++ main.o GameEngine.o Ship.o Player.o Enemy.o Bullet.o Asteroid.o AsteroidA.o AsteroidB.o -o assign10 -lsfml-graphics -lsfml-window -lsfml-system
+spaceshipDemo: main.o GameEngine.o Ship.o Player.o Enemy.o Bullet.o Asteroid.o AsteroidA.o AsteroidB.o -lsfml-graphics -lsfml-window -lsfml-system
+	g++ main.o GameEngine.o Ship.o Player.o Enemy.o Bullet.o Asteroid.o AsteroidA.o AsteroidB.o -o spaceshipDemo -lsfml-graphics -lsfml-window -lsfml-system
 
 main.o: main.cpp
 	g++ -c main.cpp
@@ -31,4 +31,4 @@ AsteroidB.o: AsteroidB.cpp
 	g++ -c AsteroidB.cpp
 
 clean:
-	rm *.o assign10
+	rm *.o spaceshipDemo
